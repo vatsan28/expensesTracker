@@ -1,0 +1,23 @@
+{
+  "name": "simplefinance",
+  "version": "1.0.0",
+  "description": "Custom financial maintenance ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo 'hello world'"
+  },
+  "keywords": [
+    "personal",
+    "financial",
+    "record"
+  ],
+  "author": "Srivatsan",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.18.2",
+    "debug": "^3.1.0",
+    "express": "^4.16.2",
+    "http": "0.0.0"
+  }
+}
