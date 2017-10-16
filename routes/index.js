@@ -3,7 +3,7 @@ var router = express.Router();
 var twilio = require('twilio');
 
 router.post('/',function(req,res){
-    console.log(req);
+    console.log(req.body.body);
     res.sendStatus(200);
 });
 router.get('/',function(req,res){
