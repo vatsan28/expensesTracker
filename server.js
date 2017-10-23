@@ -1,7 +1,17 @@
 var express = require('express'),
     app = express();
 var cors = require('cors');
+var mongoClient= require('mongoose');
 
+if (process){
+    console.log(process.env);
+} else {
+    var process={};
+    process.env={'DB_URI' : "mongodb://localhost/trackperex"};
+}
+
+console.log(process.env.DB_URI);
+mongoClient.connect(process.env.DB_URI);
 app.use(cors({origin: '*'}));
 
 /*
@@ -12,7 +22,7 @@ var http = require('http'),
     normalizePort = require('normalize-port'),
     logger = require('morgan'),
     router = require('./routes/index');
-    bodyParser = require('body-parser');
+var bodyParser = require('body-parser');
 var port = normalizePort(process.env.PORT || '8888');
 server.listen(port,function(){
     console.log('Accepting connections @ ',port);
