@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var userController = require('../controller/user');
 
 router.post('/expense',function(req,res){
-    console.log(req.body.Body);
+    console.log(req.body);
     res.sendStatus(200);
 });
 
