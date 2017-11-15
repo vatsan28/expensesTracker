@@ -31,9 +31,9 @@ exports.registerUser=function(userInfo,cb){
     var newUser = new User();
 
     // newUser.username = username;
-    newUser.email = userInfo[1];
-    newUser.firstName = userInfo[2];
-    newUser.lastName = userInfo[3];
+    newUser.email = userInfo[3];
+    newUser.firstName = userInfo[1];
+    newUser.lastName = userInfo[2];
     newUser.phoneNo = userInfo[4];
 
     newUser.save(function(err){
