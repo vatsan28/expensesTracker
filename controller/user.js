@@ -17,3 +17,32 @@ exports.createUser = function (email,firstName, lastName, phoneNo, cb) {
         }
     });
 }
+
+exports.checkIfUserExists=function(phoneNo,cb){
+    User.findOne({
+        phoneNo: phoneNo
+    }, function(err, res) {
+        console.log(err,res);
+        cb(res);
+    });
+}
+
+exports.registerUser=function(userInfo,cb){
+    var newUser = new User();
+
+    // newUser.username = username;
+    newUser.email = userInfo[1];
+    newUser.firstName = userInfo[2];
+    newUser.lastName = userInfo[3];
+    newUser.phoneNo = userInfo[4];
+
+    newUser.save(function(err){
+        if (err) {
+            console.log(err);
+            cb('Error');
+        } else {
+            console.log('success');
+            cb('Success');
+        }
+    });
+}
