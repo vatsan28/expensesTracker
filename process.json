@@ -6,8 +6,8 @@
     "error_file":"./logs/err.log",
     "out_file":"./logs/out.log",
     "env":{
-//      "DB_URI":"mongodb://vatsan28:trackperex@2016@ds129315.mlab.com:29315/trackperex"
-      "DB_URI":"mongodb://localhost/trackperex"
+      "DB_URI":"mongodb://vatsan28:trackperex@2016@ds129315.mlab.com:29315/trackperex"
+//      "DB_URI":"mongodb://localhost/trackperex"
     }
   }]
 }
